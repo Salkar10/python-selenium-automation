@@ -12,11 +12,11 @@ def open_google(context):
     context.driver.get('https://www.google.com/')
 
 
-@when('Input {search_word} into search field')
-def input_search(context, search_word):
+@when('click on cart button')
+def input_search(context, ):
     search = context.driver.find_element(*SEARCH_INPUT)
     search.clear()
-    search.send_keys(search_word)
+    search.send_keys()
     sleep(4)
 
 
