@@ -5,9 +5,6 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.support.wait import WebDriverWait
 from webdriver_manager.chrome import ChromeDriverManager
 from time import sleep
-
-# Get the path to the ChromeDriver executable
-# ChromeDriverManager will download and manage the ChromeDriver for you
 driver_path = ChromeDriverManager().install()
 
 # Create a new Chrome browser service
