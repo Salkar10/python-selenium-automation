@@ -26,17 +26,18 @@ def open_search(context):
 
 #Click:
 @when('click on cart icon')
-def click_search(context, ):
-    search=context.driver.find_element(By.XPATH,'//*[@data-test="@web/CartIcon"]')
-    search.click()
-    search.send_keys()
+def click_cart(context):
+    context.driver.find_element(By.XPATH,'//*[@data-test="@web/CartIcon"]')
+    context.click()
+    context.send_keys()
     sleep(5)
 
 
 #verify
-@then('Your cart is empty {expected_text} is shown')
-def verify_found_results_text(context, expected_text):
+@then('Verify Your cart is empty {expected_text} is shown')
+def verify_cart_empty_msg(context, expected_text):
     actual_text = context.driver.find_element(By.XPATH,'//*[@class="styles_ndsHeading__HcGpD styles_fontSize1__i0fbt styles_x2Margin__M5gHh"]').text
+    expected_text = 'Your cart is empty'
     assert expected_text in actual_text, f"Expected '{expected_text}' but found '{actual_text}'"
 
 

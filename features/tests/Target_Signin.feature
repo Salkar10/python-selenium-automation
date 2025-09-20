@@ -6,4 +6,4 @@ Feature: Sign in functionality
     Given Open Target home page
     When click account icon in header
     When click on Sign in button
-    Then sign in  <string> message is shown
+    Then Verify 'Sign in  <string> message is shown'

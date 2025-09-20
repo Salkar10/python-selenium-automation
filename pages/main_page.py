@@ -11,5 +11,7 @@ class MainPage(Page):
           self.open_url('https://www.target.com/')
           #context.app.main_page.open_main()
 
-
+#@given('open target home page')
+      def open_search(self):
+        self.driver.get('https://www.target.com/')
 
